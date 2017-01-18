@@ -3,9 +3,16 @@
 source("loadData.R")
 
 #Get total emissions per year for Baltimore
-EcBaltimore <- NEI[NEI$fips == "24510",]
-totalEc <- aggregate(EcBaltimore$Emissions, list(EcBaltimore$year), sum)
+EcBaltimore <- NEI[NEI$fips == "24510", ]
+totalEc <-
+    aggregate(EcBaltimore$Emissions, list(EcBaltimore$year), sum)
 names(totalEc) <- c("Year", "Total.Emission")
 
 #Plot this data, showing that total emission for Baltimore which mostly decreasing, except for year 2005
-plot(totalEc$Year, totalEc$Total.Emission, type = "b", xlab = "Year", ylab = "Total Emission")
+plot(
+    totalEc$Year,
+    totalEc$Total.Emission,
+    type = "b",
+    xlab = "Year",
+    ylab = "Total Emission"
+)

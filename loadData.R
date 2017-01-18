@@ -13,9 +13,3 @@ if (!file.exists(summaryFileName) ||
 #Load raw data
 NEI <- readRDS(summaryFileName)
 SCC <- readRDS(classificationFileName)
-
-#Preprocessing data, for formating, cleanup etc
-
-#convert year from int to Date
-
-

@@ -6,4 +6,10 @@ totalEc <- aggregate(NEI$Emissions, list(NEI$year), sum)
 names(totalEc) <- c("Year", "Total.Emission")
 
 #Plot this data, showing that total emission has been decreasing over years
-plot(totalEc$Year, totalEc$Total.Emission, type = "b", xlab = "Year", ylab = "Total Emission")
+plot(
+    totalEc$Year,
+    totalEc$Total.Emission,
+    type = "b",
+    xlab = "Year",
+    ylab = "Total Emission"
+)
